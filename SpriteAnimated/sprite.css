@@ -1,0 +1,31 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.sprite {
+    width: 250px; /* Ширина одного кадра */
+    height: 250px; /* Высота одного кадра */
+    background-image: url('./sprite.avif'); /* Путь к вашему спрайт листу */
+    background-repeat: no-repeat;
+    background-position: top left;
+    animation: run 1s steps(4) infinite
+}
+
+@keyframes run {
+    0% {
+        background-position: top left;
+    }
+    50% {
+        background-position: top right;
+    }
+    50.1% {
+        background-position: bottom left;
+    }
+    100% {
+        background-position: bottom right;
+    }
+}
